@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width: 400px;
+    background-color: white;
+    color: white;
+}
+
+.mainBody{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.beforeMain{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.beforeMain h1{
+    background-color: darkslategray;
+    text-align: center;
+    font-family: black ops one;
+    font-weight: 100;
+    font-size: 25px;
+    position: sticky;
+}
+.beforeMain section{
+    background-color: #131212;
+    padding: 20px;
+    max-width: 400px;
+    transition: 0.3s;
+    margin: 10px;
+    border-radius: 10px;
+}
+.beforeMain b{
+    display: block;
+    text-align: left;
+    font-family: Caladea;
+    font-weight: 100;
+    font-size: 20px;
+    background-color: #131414;
+}
+.beforeMain u{
+    display: block;
+    text-align: left;
+    font-family: Rokkitt;
+    font-weight: 100;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #131414;
+    margin-bottom: 10px;
+}
+.beforeMain hr{
+    border-top: 2px solid ;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.beforeMain button{
+   padding: 10px;
+   font-size: 25px;
+   color: white;
+   display: block;
+   background-color: #1314;
+   border: none;
+   width: 50%;
+   cursor: pointer;
+   font-size: 17px;
+   font-family: black ops one;
+   font-weight: 100;
+}
+.headText{
+    background-color: darkslategray;
+    text-align: center;
+    position: sticky;
+    font-family: Black ops one;
+    font-weight: 100;
+    font-size: 15px;
+    overflow: hidden;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.opennavbtn{
+    color: white;
+    background-color: darkslategray;
+    color: white;
+    float: left;
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navContainer{
+   height: 100%;
+   width: 0px;
+   z-index: 3;
+   position: fixed;
+   background-color: #111;
+   overflow-x: hidden;
+   transition: 0.5s;
+   float: left;
+   top: 0;
+    
+}
+
+.btn{
+   padding: 10px;
+   font-size: 25px;
+   color: white;
+   display: block;
+   transition: 0.3s;
+   background: none;
+   border: none;
+   width: 100%;
+   cursor: pointer;
+   text-align: left;
+   font-size: 17px;
+   font-family: black ops one;
+   font-weight: 100;
+
+}
+.btn i{
+    font-size: 20px;
+    width: 40px;
+}
+.closenavbtn{
+   font-size: 25px;
+   color: white;
+   display: block;
+   transition: 0.3s;
+   background: darkslategray;
+   border: none;
+   width: 100%;
+   text-align: right;
+    cursor: pointer;
+}
+
+.navheader{
+    display: block;
+    width: 100%;
+    float: left;
+    background-color: darkslategray; 
+    margin: auto;
+    text-align: center;
+}
+
+.navheader b{
+    display: block;
+    font-weight: 100;
+    font-size: 25px;
+    padding: 2px;
+    cursor: pointer;
+    font-family: Acme;
+    
+}
+
+.navheader i{
+    font-size: 50px;
+    margin: auto;
+    width: 50px;
+    display: block;
+}
+
+.searchbar{
+    width: 100%;
+    padding: 5px;
+    background-color: dimgrey;
+    border-bottom: 1px solid darkgray;
+    display: block;
+    position: sticky;
+
+}
+
+.searchbar input{
+    padding: 5px;
+    width: 75%;
+    border: 1px solid darkgray;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-family: Rokkitt;
+}
+
+.searchbar b{
+    background-color: white;
+    color: black;
+    display: block;
+    float: right;
+    text-align: center;
+    width: 20%;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contactlist{
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+.contactlist p{
+    text-align: center;
+    margin-top: 50%;
+    font-size: 30px;
+    color: dimgray;
+}
+.contactlist button{
+    text-align: center;
+    font-size: 15px;
+    background-color: #192129;
+    border: none;
+    font-family: black ops one;
+    color: darkgrey;
+    padding: 5px;
+}
+
+.contactlist ul{
+    display: block;
+    background-color: #131414;
+    padding: 0px;
+
+}
+
+.contactlist ul li:nth-child(odd) {
+  padding: 0px 0px 0px 18px;
+  display: block;
+  overflow: hidden;
+  background-color: #111912;
+  font-family: Rokkitt;
+  font-size: 15px;
+  border-bottom: 1px solid darkgray;
+}
+.contactlist ul li:nth-child(even) {
+  padding: 0px 0px 0px 18px;
+  display: block;
+  overflow: hidden;
+  background-color: #black;
+  background-color: #121315;
+  font-family: Rokkitt;
+  font-size: 15px;
+  border-bottom: 1px solid darkgray;
+}
+.contactlist ul li::first-line {
+    font-size: 20px;
+    font-style: bold;
+}
+
+
+.contactlist b{
+    display: block;
+}
+
+.contactAdd{
+    width: 100%;
+    margin: 0px;
+    display: none;
+    z-index: 2;
+}
+.contactAdd h2{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: Black ops one;
+    font-weight: 100;
+}
+.contactAdd label{
+    display: block;
+    width: 80%;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: Acme
+}
+.contactAdd input{
+    display: block;
+    width: 80%;
+    padding: 5px;
+    border: 1px solid darkgray;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: Rokkitt;
+    box-shadow: 0px 0px 5px 0px  grey;
+}
+
+.addbtn{
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #131414;
+    color: white;
+    font-family: black ops one;
+    width: 150px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px  grey;
+    border: none;
+    cursor: pointer;
+}
+.addbtn:hover{
+    opacity: 0.6;
+}
+.editcontact{
+    width: 100%;
+    margin: 0px;
+    display: none;
+    z-index: 2;
+}
+.editcontact h2{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: black ops one;
+    font-weight: 100;
+}
+.editcontact label{
+    display: block;
+    width: 80%;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: Acme;
+}
+.editcontact input{
+    display: block;
+    width: 80%;
+    padding: 5px;
+    border: 1px solid darkgray;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: Rokkitt;
+}
+
+.addbtn1{
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #131414;
+    color: white;
+    font-family: black ops one;
+    width: 150px;
+    box-shadow: 0px 0px 5px 0px  grey;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+.addbtn1:hover{
+    opacity: 0.6;
+}
+
+.fa-trash{
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    width: 20px;
+    float: right;
+    color: white;
+    margin-top: -38px;
+    opacity: 0.5;
+    
+}
+.fa-trash:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+.fa-edit{
+    text-align: center;
+    cursor: pointer;
+    width: 20px;
+    float: right;
+    color: white;
+    margin-top: -8px;
+    opacity: 0.5;
+}
+.fa-edit:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.about{
+    display: none;
+}
+
+.aboutsec{
+    padding: 20px;
+    background-color: #121915;
+    margin-top: 50%;
+    width: 100%;
+    color: white;
+    font-family: Caladea;
+    padding: 20px;
+    text-align: center;
+}
+.aboutsec b{
+    display: block;
+    text-align: center;
+    font-family: black ops one;
+    font-weight: 100;
+}
+.aboutsec hr{
+    border-top: 1px solid white;
+    width: 80%;
+    border-radius: 20px;
+}
+.aboutsec h3{
+    color: white;
+    text-align: center;
+    font-family: Black ops one;
+    font-weight: 100;
+    font-size: 20px;
+    margin: auto;
+}
+.social{
+    width: 80%;
+    margin: auto;
+}
+.social a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    width: 23.9%;
+    background-color: #131414;
+    text-align: center;
+}
+
+
+#toast {
+  visibility: hidden;
+  min-width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 32%;
+  bottom: 50px;
+  font-size: 17px;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 50px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 50px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 50px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 50px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

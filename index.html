@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Manager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <div class="beforeMain" id="main">
+            
+        <h1>Welcome to Contact Manager App</h1>
+        <section>
+        <b>Add Contact:</b><hr><u>You can easily add  your contacts here. You can add your Name, Mobile number and Email.</u>
+        
+        <b>Delete Contact:</b><hr> <u>Delete any unnecessary contact by pressing delete button.</u>
+        
+        <b>Edit Contact:</b><hr><u>You can edit your contacts. But all your old data of that contact will be remove and new data will be add on that contact.</u>
+             
+        <b>Search Contact:</b><hr><u>You can find your contact easily by searching system. Seacrch is sort by contact Name. </u>
+          
+        <b>Disclaimer:</b><hr><u>All right reserved by Arafat Hossain&copy;. Local storage system isn't available, your all added data will be disappear after Exit. </u>
+        <button id="mainBtn">Let's Go</button>
+        </section>
+    </div>
+<!--     Main Body  -->
+    <div class="mainBody" id="mainBody">
+
+        
+<!--    header  -->
+    <header class="headText">
+    <div class="opennavbtn" id="navOpenbtn" onclick="openNav()">
+        &#9776;
+    </div>
+    <h1>Contact Manager</h1>
+    <div class="searchbar" id="searchbar">
+    <input type="search" placeholder=" Search" id="search">
+    <b class="addc" onclick="AddC()"><i class="fa fa-user-plus"></i></b>
+    </div>
+    </header>
+    
+<!--    sticky nav bar  -->
+<!--    Nav Bar Open -->
+
+<!--    Side Nav  -->
+    <div class="navContainer" id="SideNav">
+<!--        Nav Bar Close  -->
+        <button class="closenavbtn" onclick="closeNav()">&times;</button>
+        <p class="navheader">
+        <i class="fa fa-address-book" aria-hidden="true"></i> 
+        <b>Contact Manager</b>
+        <b style="font-size: 15px;">Created by Arafat</b>
+        </p>
+        
+<!--        Nav Options   -->
+        <button class="btn" onclick="openInfo('contactlist')" id="btn3"><i class="fa fa-address-book-o" aria-hidden="true"></i>Contact List</button> 
+        <button class="btn" onclick="openInfo('addContact')" id="btn2"><i class="fa fa-user-plus"></i>Add Contact</button>
+        <button class="btn" onclick="openInfo('ab')"> <i class="fa fa-info-circle" aria-hidden="true"></i>About</button>
+        <button class="btn" onclick="exitPage()"> <i class="fa fa-window-close" aria-hidden="true"> </i>Exit</button>  
+    </div>
+
+<!-- contact list tab-->
+    <div class="contactlist tab" id="contactlist">
+<!--    contactlist -->
+    <p id="unText">No contact available<br> <button onclick="AddC()">+ Add one</button></p>
+    <ul id="item">
+    </ul>    
+    </div>
+        
+<!--add contact-->
+    <div class="contactAdd tab" id="addContact">
+    <h2>Add Contact</h2> 
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter Name" maxlength="16" onfocus="this.value=''" value="Arafat Hossain">
+        <label>Mobile No</label>
+        <input type="tel" id="number"   placeholder="Enter Number" maxlength="15" onfocus="this.value=''" value="+0881xxxxxxxxx">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter Email" onfocus="this.value=''" value="Arafat@gmail.com"><br>
+        <button class="addbtn" id="" onclick="AddContact()">Save</button>
+    </div>
+<!--edit contact -->
+<div class="editcontact" id="editContact">
+        <h2>Update Contact</h2> 
+        <label>New Name</label>
+        <input type="text" id="editname" placeholder="Enter Name" maxlength="16">
+        <label>New Mobile No</label>
+        <input type="tel" id="editnumber"   placeholder="Enter Number" maxlength="15">
+        <label>New Email</label>
+        <input type="email" id="editemail" placeholder="Enter Email"><br>
+        <button class="addbtn1" id="button1">Update</button>
+</div>
+    
+        <div class="about tab" id="ab">
+        <div class="aboutsec">
+        <b>Contact Manager</b> 
+        <b>Version 1.0</b>
+        <b>Join Me:</b>
+        <div class="social">
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-youtube"></a>
+        <a href="" class="fa fa-github"></a>
+        </div>
+        <hr><h3>Created by Arafat</h3>
+        </div>
+        </div>
+    <div id="toast">Fill Empty Box</div>
+    
+    
+   </div> 
+<script src="script.js"></script>   
+<script>
+</script>
+</body>
+</html>
